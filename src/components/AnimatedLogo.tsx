@@ -1,12 +1,18 @@
-import cubeLogo from '../assets/icons/cube.svg'
+//import cubeLogo from '../assets/icons/cube.svg'
+import '../styles/AnimatedLogo.less'
+import Icon from './Icon'
+
 function AnimatedLogo() {
   return (
     <>
-      <div>TODO: This is an Animated Logo</div>
-      <img src={cubeLogo} className="logo" alt="Animated Cube Logo" />
+      <div id="animated-cube">
+        {/* <div className='icon'></div> */}
+        <Icon style='cube' color='icon-green-highlight'></Icon>
+      {/* <img src={cubeLogo} className="cube" alt="Animated Cube Logo"/> */}
         {/* <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a> */}
+      </div>
     </>
   )
 }

@@ -1,8 +1,7 @@
 //import { useState } from 'react'
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
-import './styles/App.css'
-import AnimatedLogo from './components/AnimatedLogo'
+import './styles/App.less'
 import Header from './components/Header'
 import Intro from './components/Intro'
 import ContactMe from './components/ContactMe'
@@ -10,6 +9,7 @@ import Bio from './components/Bio'
 import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
 import Footer from './components/Footer'
+import Icon from './components/Icon'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -20,7 +20,8 @@ function App() {
         <Header></Header>
       </div>
       <div>
-        <AnimatedLogo></AnimatedLogo>
+        TODO: Logo Section placeholder
+        <Icon style='cube' color='icon-green-highlight'></Icon>
       </div>
       <div>
         TODO: Introduction section
@@ -58,9 +59,10 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+       */}
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p> */}
+      </p>
     </>
   )
 }
