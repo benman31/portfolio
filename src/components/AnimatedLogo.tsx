@@ -7,7 +7,7 @@ function AnimatedLogo() {
     <>
       <div id="animated-cube">
         {/* <div className='icon'></div> */}
-        <Icon style='cube' color='icon-green-highlight'></Icon>
+        <Icon style='cube' color='green-highlight'></Icon>
       {/* <img src={cubeLogo} className="cube" alt="Animated Cube Logo"/> */}
         {/* <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />

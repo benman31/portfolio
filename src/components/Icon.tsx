@@ -1,7 +1,7 @@
 import '../styles/Icon.less'
 
 type IconStyle = 'cube' | 'folder' | 'github' | 'linkedin' | 'mail'
-type IconColor = 'icon-green-highlight' | 'icon-off-white' | 'icon-light-minty-green'
+type IconColor = 'green-highlight' | 'off-white' | 'minty-green'
 
 type IconParams = {
   style: IconStyle,
@@ -14,7 +14,7 @@ function Icon(params: IconParams) {
 
   return (
     <>
-      <div>
+      <div className='icon-container'>
         <div className={`icon ${style} ${color}`} onClick={onClick}></div>
       </div>
     </>

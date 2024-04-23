@@ -21,7 +21,7 @@ function App() {
       </div>
       <div>
         TODO: Logo Section placeholder
-        <Icon style='cube' color='icon-green-highlight'></Icon>
+        <Icon style='cube' color='green-highlight'></Icon>
       </div>
       <div>
         TODO: Introduction section

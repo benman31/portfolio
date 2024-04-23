@@ -1,54 +1,57 @@
 @import "global.less";
 
-.icon {
-  width: 3em;
-  height: 3em;
-  display: inline-block;
-}
+.icon-container {
+  padding-left: .5rem;
+  padding-right: .5rem;
 
-.cube {
-  -webkit-mask: url(../assets/icons/cube.svg) no-repeat 100% 100%;
-  mask: url(../assets/icons/cube.svg) no-repeat 100% 100%;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
+  .cube {
+    -webkit-mask: url(../assets/icons/cube.svg);
+    mask: url(../assets/icons/cube.svg);
+  }
+  
+  .folder {
+    -webkit-mask: url(../assets/icons/folder.svg);
+    mask: url(../assets/icons/folder.svg);
+  }
+  
+  .mail {
+    -webkit-mask: url(../assets/icons/mail.svg);
+    mask: url(../assets/icons/mail.svg);
+  }
+  
+  .github {
+    -webkit-mask: url(../assets/icons/github.svg);
+    mask: url(../assets/icons/github.svg);
+  }
+  
+  .linkedin {
+    -webkit-mask: url(../assets/icons/linkedin.svg);
+    mask: url(../assets/icons/linkedin.svg);
+  }
+  
+  .green-highlight {
+    background-color: @greenHighlight;
+  }
+  
+  .off-white {
+    background-color: @offWhite;
+  }
+  
+  .minty-green {
+    background-color: @lightMintyGreen;
+  }
 
-.folder {
-  -webkit-mask: url(../assets/icons/folder.svg) no-repeat 100% 100%;
-  mask: url(../assets/icons/folder.svg) no-repeat 100% 100%;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: auto;
+    display: inline-block;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 50% 50%;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+  }
 
-.mail {
-  -webkit-mask: url(../assets/icons/mail.svg) no-repeat 100% 100%;
-  mask: url(../assets/icons/mail.svg) no-repeat 100% 100%;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
-
-.github {
-  -webkit-mask: url(../assets/icons/github.svg) no-repeat 100% 100%;
-  mask: url(../assets/icons/github.svg) no-repeat 100% 100%;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
-
-.linkedin {
-  -webkit-mask: url(../assets/icons/linkedin.svg) no-repeat 100% 100%;
-  mask: url(../assets/icons/linkedin.svg) no-repeat 100% 100%;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-}
-
-.icon-green-highlight {
-  background-color: @greenHighlight;
-}
-
-.icon-off-white {
-  background-color: @offWhite;
-}
-
-.icon-light-minty-green {
-  background-color: @lightMintyGreen;
 }
