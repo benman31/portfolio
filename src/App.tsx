@@ -4,12 +4,11 @@
 import './styles/App.less'
 import Header from './components/Header'
 import Intro from './components/Intro'
-import ContactMe from './components/ContactMe'
-import Bio from './components/Bio'
+import About from './components/About'
 import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
 import Footer from './components/Footer'
-import Icon from './components/Icon'
+import AnimatedLogo from './components/AnimatedLogo'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -19,30 +18,26 @@ function App() {
       <div>
         <Header></Header>
       </div>
-      <div>
-        TODO: Logo Section placeholder
-        <Icon style='cube' color='green-highlight'></Icon>
+      <div className='main-content'>
+        <div>
+          <AnimatedLogo></AnimatedLogo>
+        </div>
+        <div>
+          <Intro></Intro>
+        </div>
+        <div>
+          <About></About>
+        </div>
+        <div>
+          TODO: Resume section {/* Interactive */}
+          <Resume></Resume>
+        </div>
+        <div>
+          TODO: Portfolio Section
+          <Portfolio></Portfolio>
+        </div>
       </div>
-      <div>
-        TODO: Introduction section
-        <Intro></Intro>
-      </div>
-      <div>
-        TODO: Contact Me CTA
-        <ContactMe></ContactMe>
-      </div>
-      <div>
-        TODO: Biography Section
-        <Bio></Bio>
-      </div>
-      <div>
-        TODO: Resume section {/* Interactive */}
-        <Resume></Resume>
-      </div>
-      <div>
-        TODO: Portfolio Section
-        <Portfolio></Portfolio>
-      </div>
+
       <div>
         TODO: Footer Section {/* copywrite and links again? */}
         <Footer></Footer>

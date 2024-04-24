@@ -1,0 +1,46 @@
+@import './global.less';
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    padding-top: 1rem;
+
+    .text-container {
+      text-align: left;
+      p {
+        margin-block-start: auto;
+        text-indent: 2ch;
+      }
+      span {
+        color: @lightMintyGreen;
+        font-weight: bold;
+      }
+    }
+
+    .about-pic {
+      margin-left: 2rem;
+      background-image: url(../assets/profile/ben.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-radius: 12px;
+      width: 300px;
+      height: 300px;
+      margin-bottom: auto;
+    }
+  }
+
+  @media screen and (max-width: 750px){
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+    .about-pic {
+      display: none;
+    }
+  }
+}
