@@ -9,6 +9,7 @@ import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
 import Footer from './components/Footer'
 import AnimatedLogo from './components/AnimatedLogo'
+import TransitionWrapper from './components/TransitionWrapper'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -26,15 +27,19 @@ function App() {
           <Intro></Intro>
         </div>
         <div>
-          <About></About>
+          <TransitionWrapper transitionDelay={100}>
+            <About></About>
+          </TransitionWrapper>
         </div>
         <div>
-          TODO: Resume section {/* Interactive */}
-          <Resume></Resume>
+          <TransitionWrapper transitionDelay={100}>
+            <Resume></Resume>
+          </TransitionWrapper>
         </div>
         <div>
-          TODO: Portfolio Section
-          <Portfolio></Portfolio>
+          <TransitionWrapper transitionDelay={100}>
+            <Portfolio></Portfolio>
+          </TransitionWrapper>
         </div>
       </div>
 
@@ -42,22 +47,6 @@ function App() {
         TODO: Footer Section {/* copywrite and links again? */}
         <Footer></Footer>
       </div>
-      {/* <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <button onClick={() => setCount((count) => count - 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-       */}
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

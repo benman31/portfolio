@@ -11,13 +11,17 @@
     text-wrap: nowrap;
   }
   .section-divider {
-    display: flex;
-    flex-direction: row;
     background-color: @lightMintyGreen;
     margin-top: 1rem;
     margin-left: .5rem;
-    height: 2px;
+    height: 1px;
     width: 20rem;
   }
 
+}
+
+@media screen and (max-width: 780px){
+  .section-divider {
+    display: none;
+  }
 }

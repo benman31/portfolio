@@ -1,0 +1,132 @@
+@import './global.less';
+
+#resume {
+  --tab-transition-time: 300ms;
+  --tab-offset: 3rem;
+  @media screen and (min-width: 800px){
+    --tab-offset: 15rem;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
+  font-size: large;
+
+  .stateful-container {
+    display: block;
+    //flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    //padding: 2.5rem;
+    .tab-selection{
+      display: flex;
+      flex-direction: row;
+      //min-width: 300px;
+
+      .tab-container {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        .tab {
+          //width: 100%;
+          font-weight: bold;
+          text-transform: uppercase;
+          button {
+            text-align: left;
+            width: 100%;
+            color: @offWhite;
+            height: var(--button-height);
+            &.selected {
+              color: @greenHighlight;
+              transition: color 0ms ease-in-out var(--tab-transition-time);
+            }
+          }
+          /* button:active {
+              background-color: red;
+              transition: all 300ms ease-in-out 0ms;
+          } */
+        }
+      }
+
+      .selection-indicator {
+          margin-left: 3rem;
+          width: 3px;
+          //background-color: @offWhite;
+        .indicator-fg {
+          --tab-index: 0;
+          width: 100%;
+          position: relative;
+          top: calc(var(--tab-index) * var(--tab-offset));
+          height: var(--button-height);
+          background-color: @greenHighlight;
+          transition: top var(--tab-transition-time) ease-in-out 0ms;
+        }
+      }
+    }
+    @media screen and (min-width: 800px){
+      .tab-selection {
+        flex-direction: column;
+        .tab-container {
+          flex-direction: row;
+          .tab {
+            width: var(--tab-offset);
+            button {
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+        .selection-indicator {
+          width: calc(var(--tab-offset) * 3);
+          margin-left: 0;
+          .indicator-fg {
+            width: calc(var(--tab-offset) / 3);
+            height: 3px;
+            top: auto;
+            left: calc(var(--tab-index) * var(--tab-offset) + var(--tab-offset) / 3);
+            transition: left var(--tab-transition-time) ease-in-out 0ms;
+          }
+        }
+      }
+    }
+
+    .display {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      max-width: 720px;
+      .title-and-company-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .job-title {
+          font-weight: bold;
+          padding-bottom: .5rem;
+          color: @lightMintyGreen;
+          &::after {
+            padding-left: 1ch;
+            padding-right: 1ch;
+            content: '@';
+            color: @offWhite;
+          }
+        }
+        .company-name {
+          font-weight: bold;
+          color: @lightMintyGreen;
+          padding-bottom: .5rem;
+        }
+      }
+      .dates {
+        text-transform: uppercase;
+        font-size: medium;
+      }
+      ul {
+        list-style: square;
+        list-style-position: outside;
+      }
+    }
+  }
+}

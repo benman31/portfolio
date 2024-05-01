@@ -7,12 +7,14 @@
   justify-content: center;
   .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     align-items: start;
     padding-top: 1rem;
+    margin-right: auto;
 
     .text-container {
       text-align: left;
+      max-width: 600px;
       p {
         margin-block-start: auto;
         text-indent: 2ch;
@@ -33,14 +35,20 @@
       height: 300px;
       margin-bottom: auto;
     }
+    @media screen and (max-width: 900px){
+      .about-pic {
+        width: 200px;
+        height: 200px;
+      }
+    }
   }
 
-  @media screen and (max-width: 750px){
+  @media screen and (max-width: 780px){
     .about-content {
       grid-template-columns: 1fr;
-    }
-    .about-pic {
-      display: none;
+      .about-pic {
+        display: none;
+      }
     }
   }
 }
