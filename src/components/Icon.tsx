@@ -1,7 +1,7 @@
 import '../styles/Icon.less'
 
-type IconStyle = 'cube' | 'folder' | 'github' | 'linkedin' | 'mail'
-type IconColor = 'green-highlight' | 'off-white' | 'minty-green'
+export type IconStyle = 'cube' | 'folder' | 'github' | 'linkedin' | 'steam' | 'mail' | 'controller'
+export type IconColor = 'green-highlight' | 'off-white' | 'minty-green'
 
 type IconParams = {
   style: IconStyle,

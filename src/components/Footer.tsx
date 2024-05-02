@@ -1,8 +1,8 @@
+
+
 function Footer() {
   return (
-    <>
-      <div>TODO: This is a Footer</div>
-    </>
+      <div id='footer'>© 2024 built by Ben Enman</div>
   )
 }
 
