@@ -6,7 +6,6 @@ import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
 import Footer from './components/Footer'
 import AnimatedLogo from './components/AnimatedLogo'
-import TransitionWrapper from './components/TransitionWrapper'
 
 function App() {
   return (
@@ -19,9 +18,7 @@ function App() {
         <Intro></Intro>
         <About></About>
         <Resume></Resume>
-        {/* <TransitionWrapper transitionDelay={100}> */}
-          <Portfolio></Portfolio>
-        {/* </TransitionWrapper> */}
+        <Portfolio></Portfolio>
       </div>
       <Footer></Footer>
     </>
