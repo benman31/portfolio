@@ -5,10 +5,15 @@
 #portfolio {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   margin-bottom: @sectionMargin;
-  
-  .outer-cards-container {
+  .outer-cards-container{
+    display: flex;
+    width: auto;
+    margin-left: 2rem;
+    justify-content: center;
+  .cards-grid {
+    margin-top: 1rem;
     display: grid;
     width: min-content;
     grid-template-columns: repeat(1, auto);
@@ -24,14 +29,15 @@
       height: @cardWidth;
       max-height: @cardWidth;
       background: linear-gradient(@chalkBoardGreen 100%, @lighterChalkBoardGreen);
-      border: 2px solid @greenHighlight;
+      border: solid 3px @chalkBoardGreen;
       border-radius: 12px;
-      transition: all 300ms, ease-in-out-in 300ms;
+      transition: all 150ms, ease-in-out 150ms;
 
       &:hover {
         transform: translateY(-6px);
-        background: linear-gradient(30deg, @chalkBoardGreen 70%, @lighterChalkBoardGreen),
-
+        background: linear-gradient(0deg, @chalkBoardGreen 70%, @lighterChalkBoardGreen);
+        box-shadow: 0px 6px 12px @greenHighlight;
+        border: solid 3px @greenHighlight
         
       }
 
@@ -76,15 +82,16 @@
   }
 
   @media screen and (min-width: calc(@cardWidth * 3)) {
-    .outer-cards-container {
+    .cards-grid {
       grid-template-columns: repeat(2, auto)
     }
   }
 
   @media screen and (min-width: calc(@cardWidth * 4)) {
-    .outer-cards-container {
+    .cards-grid {
       grid-template-columns: repeat(3, auto)
     }
   }
+}
 
 }

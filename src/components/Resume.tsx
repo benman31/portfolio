@@ -66,15 +66,13 @@ const WORK_EXPERIENCE: Job[] = [
 function TabSelector(params: TabSelectorParams) {
   const { label, isSelected, onClick } = params
   return (
-    <>
-      <div className='tab'>
-        <button
-          className={isSelected ? 'selected' : ''}
-          onClick={onClick}>
-            { label }
-        </button>
-      </div>
-    </>
+    <div className='tab'>
+      <button
+        className={isSelected ? 'selected' : ''}
+        onClick={onClick}>
+          { label }
+      </button>
+    </div>
   )
 }
 
@@ -120,17 +118,17 @@ function StatefulContainer() {
   const displayList = WORK_EXPERIENCE.map((job, idx) => {
     const isSelected = selectedIdx === idx
     return (
-      <ResumeDisplay
-        key={idx}
-        hidden={!isSelected}
-        job={job}
-      >
-      </ResumeDisplay>
+        <ResumeDisplay
+          key={idx}
+          hidden={!isSelected}
+          job={job}
+        >
+        </ResumeDisplay>
     )
   })
   return (
-    <>
-      <div className='stateful-container'>
+    <div className='stateful-container'>
+      <TransitionWrapper transitionDelay={0}>
         <div className='tab-selection'>
           <div className='tab-container'>
             {tabList}
@@ -139,22 +137,24 @@ function StatefulContainer() {
             <div className='indicator-fg' style={indicatorPosition}></div>
           </div>
         </div>
-      {displayList}
-      </div>
-    </>
+      </TransitionWrapper>
+      <TransitionWrapper transitionDelay={0} threshold={0.1}>
+        {displayList}
+      </TransitionWrapper>
+    </div>
   )
 }
 
 function Resume() {
   return (
-    <>
-      <div id='resume'>
+    <div id='resume'>
+      <TransitionWrapper transitionDelay={0}>
         <SectionHeader title="// resume"></SectionHeader>
-        <div>
-          <StatefulContainer></StatefulContainer>
-        </div>
+      </TransitionWrapper>
+      <div>
+        <StatefulContainer></StatefulContainer>
       </div>
-    </>
+    </div>
   )
 }
 

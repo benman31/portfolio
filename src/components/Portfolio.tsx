@@ -54,19 +54,19 @@ function Card(props: CardProps) {
           {
             props.githubURL &&
             <a title='check out the Github repository' href={props.githubURL} target='_blank'>
-              <Icon style={'github'} color={'green-highlight'}></Icon>
+              <Icon style={'github'} color={'minty-green'}></Icon>
             </a>
           }
           {
             props.steamURL &&
             <a title='check out the Steam Page' href={props.steamURL} target='_blank'>
-              <Icon style={'steam'} color={'green-highlight'}></Icon>
+              <Icon style={'steam'} color={'minty-green'}></Icon>
             </a>
           }
           {
             props.playURL &&
             <a title='play the web version' href={props.playURL} target='_blank'>
-              <Icon style={'controller'} color={'green-highlight'}></Icon>
+              <Icon style={'controller'} color={'minty-green'}></Icon>
             </a>
           }
         </div>
@@ -89,9 +89,13 @@ function Portfolio() {
   })
   return (
     <div id='portfolio'>
-      <SectionHeader title='// portfolio'></SectionHeader>
+      <TransitionWrapper transitionDelay={0}>
+        <SectionHeader title='// portfolio'></SectionHeader>
+      </TransitionWrapper>
       <div className='outer-cards-container'>
-        {cardList}
+        <div className='cards-grid'>
+          {cardList}
+        </div>
       </div>
     </div>
   )

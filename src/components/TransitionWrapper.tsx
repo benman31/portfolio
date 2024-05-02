@@ -25,11 +25,15 @@ function useInViewPort<T extends Element>(ref: React.RefObject<T>, options?: Int
   return inViewport;
 }
 
-type TransitionProps = React.HTMLAttributes<Element> & {transitionDelay?: number}
+type TransitionProps = React.HTMLAttributes<Element> & 
+  {
+    transitionDelay?: number,
+    threshold?: number
+  }
 
 function TransitionWrapper(props: TransitionProps) {
   const targetRef = useRef<HTMLDivElement>(null);
-  const isVisible = useInViewPort(targetRef, { threshold: 0.5 });
+  const isVisible = useInViewPort(targetRef, { threshold: props.threshold ? props.threshold : 0.5});
   const {transitionDelay, children} = props
 
   return (

@@ -13,7 +13,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --button-height: @buttonHeight
+  --button-height: @buttonHeight;
 }
 
 a {
@@ -31,6 +31,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -42,13 +43,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.47em;
-  line-height: 0.73;
+  font-size: 1.75em;
   font-family: 'Courier New', Courier, monospace;
 }
 
 p {
-  font-size:large
+  font-size:large;
+  line-height: 2;
 }
 
 ul {

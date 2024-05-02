@@ -3,11 +3,11 @@
 #about {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
   margin-bottom: @sectionMargin;
   
   .about-content {
+    margin-left: 2rem;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: start;
@@ -19,7 +19,6 @@
       max-width: 600px;
       p {
         margin-block-start: auto;
-        text-indent: 2ch;
       }
       span {
         color: @lightMintyGreen;

@@ -4,14 +4,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 
   a {
     padding-left: .5rem;
     padding-right: .5rem;
+
+    &.my-name {
+      font-size: large;
+      font-weight: bold;
+      color: @lightMintyGreen;
+      padding-right: .5rem;
+    }
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
   .nav-container {
     display: none;
   }

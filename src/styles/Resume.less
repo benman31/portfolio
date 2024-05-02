@@ -11,15 +11,14 @@
   flex-direction: column;
   align-items: start;
   text-align: left;
-  font-size: large;
   margin-bottom: @sectionMargin;
 
   .stateful-container {
-    display: block;
-    //flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    //padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //margin-left: 1.5rem;
     .tab-selection{
       display: flex;
       flex-direction: row;
@@ -43,10 +42,6 @@
               transition: color 0ms ease-in-out var(--tab-transition-time);
             }
           }
-          /* button:active {
-              background-color: red;
-              transition: all 300ms ease-in-out 0ms;
-          } */
         }
       }
 
@@ -94,12 +89,14 @@
 
     .display {
       padding-top: 2rem;
+      margin-left: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: start;
       align-items: start;
       max-width: 720px;
       .title-and-company-container {
+        font-size: large;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

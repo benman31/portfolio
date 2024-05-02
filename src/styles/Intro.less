@@ -4,9 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
   max-width: 1000px;
-  //min-height: 100vh;
+  min-height: 30vh;
   margin-bottom: @sectionMargin;
   
   h1 {
@@ -14,13 +13,26 @@
     margin: 0;
   }
 
-  p {
-    max-width: 500px;
-    text-align: center;
-  }
-
   span {
     color: @lightMintyGreen;
+    font-weight: bold;
+  }
+
+ .intro-container{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      max-width: 600px;
+      text-align: center;
+    }
+    padding-bottom: 1.5rem;
+  }
+
+  @media screen and (min-width: 800px){
+    .intro-container {
+      flex-direction: row;
+    }
   }
 
 }

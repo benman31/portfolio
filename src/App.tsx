@@ -17,12 +17,8 @@ function App() {
       <div className='main-content'>
         <AnimatedLogo></AnimatedLogo>
         <Intro></Intro>
-        <TransitionWrapper transitionDelay={100}>
-          <About></About>
-        </TransitionWrapper>
-        <TransitionWrapper transitionDelay={100}>
-          <Resume></Resume>
-        </TransitionWrapper>
+        <About></About>
+        <Resume></Resume>
         {/* <TransitionWrapper transitionDelay={100}> */}
           <Portfolio></Portfolio>
         {/* </TransitionWrapper> */}

@@ -16,28 +16,33 @@ const SKILLS_LIST: JSX.Element[] = [
 function About() {
   const skills = SKILLS_LIST.map((item, idx) => {
     const transitionDelay = (idx + 1) * 100
-    return (<TransitionWrapper transitionDelay={transitionDelay}>{item}</TransitionWrapper>)
+    return (<TransitionWrapper key={idx}transitionDelay={transitionDelay}>{item}</TransitionWrapper>)
   })
   return (
     <div id='about'>
+      <TransitionWrapper transitionDelay={0}>
         <SectionHeader title='// about me'></SectionHeader>
+      </TransitionWrapper>
         <div className='about-content'>
           <div className='text-container'>
-          <p>
-            I'm a recent graduate of the <span>University of Prince Edward Island</span> where I earned a <span>BSc.
-            in computer science</span>, and also managed to squeeze in nearly <span>2.5 years</span> of game programming
-            experience at <span>Other Ocean Interactive</span> while I studied.
-            Getting my start in game development was a dream come true and I'm proud to have been
-            a part of the small team that developed and shipped the fast-paced arena rogue-lite shooter <span>Diebrary</span>.
-          </p>
-          <p>
-            Here's a list of some of the tech I've worked with on my projects.
-          </p>
+          <TransitionWrapper transitionDelay={0}>
+            <p>
+              I recently graduated from the <span>University of Prince Edward Island</span> with a <span>BSc.
+              in computer science</span>, and have nearly <span>2.5 years</span> of game programming
+              experience at <span>Other Ocean Interactive</span>.
+              Getting my start in game development was a dream come true and I'm currently <span>looking to start my next adventure</span>.
+            </p>
+            <p>
+              Here's a list of some of the tech I've worked with on my projects.
+            </p>
+          </TransitionWrapper>
           <ul>
             {skills}
           </ul>
           </div>
-          <div className="about-pic"></div>
+          <TransitionWrapper transitionDelay={100}>
+            <div className="about-pic"></div>
+          </TransitionWrapper>
         </div>
     </div>
   )
