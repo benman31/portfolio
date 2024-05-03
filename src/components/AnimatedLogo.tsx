@@ -2,6 +2,7 @@ import Icon from './Icon';
 import '../styles/AnimatedLogo.less';
 
 //TODO make the actual animated logo
+// test
 function AnimatedLogo() {
   return (
     <>
