@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# Background
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This site serves as an ever-evolving portfolio to showcase my work as a coder and game developer.</br>
 
-Currently, two official plugins are available:
+This project also serves as a learning tool for React (up until now my primary exposure to front-end JavaScript frameworks has been Vue.js). And has given me a chance to get more hands-on with GitHub's web doployment tools (Pages and Actions) as well as the joys of fiddling with DNS settings.</br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I chose Vite.js as my React dev environment based on it's proported speed and lack of prescribed structure. Given that my primary learning goal was to get the feel for pure React, and that the goal was to create a static website, it seemed like a better fit than heavier frameworks such as Next.js.</br>
 
-## Expanding the ESLint configuration
+Less.js was chosen over pure CSS mainly due to familiarity from past projects, and the desire to avoid friction / additional in styling the site.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Setup
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
++ If you don't already have it, install Node.js and optionally Node Version Manager. More info <a href="https://nodejs.org/en/learn/getting-started/how-to-install-nodejs">here</a>
++ Clone the repo to your directory of choice
++ Install dependencies from your editor / console of choice: `npm -i`
++ Build and run the vite developlemnt server `npm start`
++ View in your browser (defaults to `http://localhost:5173/`)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Roadmap
+In no particular order, some planned updates for the near future are:</br>
+
++ Interactive carosel in portfolio section for larger screens to show off featured projects
++ Animated Logo at the top to add a bit of juice to the page
++ Full support for light mode browser preferences
++ Audit and improvement of Accessibility for the entire site
++ Updates to select projects to allow full support for in-browser interactivity (pending further investigation - either via HTML iframes or restructuring the site to be a fully dynamic web app)
