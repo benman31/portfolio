@@ -6,7 +6,7 @@ This project also serves as a learning tool for React (up until now my primary e
 
 I chose Vite.js as my React dev environment based on it's proported speed and lack of prescribed structure. Given that my primary learning goal was to get the feel for pure React, and that the goal was to create a static website, it seemed like a better fit than heavier frameworks such as Next.js.</br>
 
-Less.js was chosen over pure CSS mainly due to familiarity from past projects, and the desire to avoid friction / additional in styling the site.
+Less.js was chosen over pure CSS mainly due to familiarity from past projects, and the desire to avoid friction in styling the site.
 
 
 ## Setup
