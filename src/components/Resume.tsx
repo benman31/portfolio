@@ -43,7 +43,7 @@ const WORK_EXPERIENCE: Job[] = [
     companyName: 'Freelance English Teaching',
     date: 'Dec 2017 - Aug 2019',
     duties: [
-      `Conducted in-house business English classes on a contractbasis at various
+      `Conducted in-house business English classes on a contract basis at various
        firms throughout Berlin including Deutsche Bahn, BASF and Kayak `,
       `Created customized content for each individual client while adhering to the guidelines
        and best practices placed by the language schools through which the teaching contracts were negotiated`,

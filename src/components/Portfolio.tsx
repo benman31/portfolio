@@ -40,6 +40,12 @@ type CardProps = React.HTMLAttributes<HTMLDivElement> &
       githubURL: "https://github.com/benman31/pfxSystem",
       footer: "C++ / OpenGL"
     },
+    {
+      title: "Portfolio Website",
+      desc: "This very website! An ever-evolving showcase of my projects. Developed in React, learning as I go.",
+      githubURL: "https://github.com/benman31/portfolio",
+      footer: "React / Vite.js / GitHub Pages"
+    },
   ]
 
 
