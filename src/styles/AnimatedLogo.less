@@ -2,11 +2,11 @@
 
 #animated-logo {
 
-  @cubeWidth: 8rem;//150px;
-  @parentTranslationOffset: 4rem;//80px;
-  @edgeThickness: .25rem;//6px;
-  @faceTranslationOffset: 4.2rem;//80px; //This should be set to around  1/2 of the cube width + edge thickness give or take a pixel if using rounded corners
-  @animationDuration: 10s;
+  @cubeWidth: 8rem;
+  @parentTranslationOffset: 4rem;
+  @edgeThickness: .25rem;
+  @faceTranslationOffset: 4.2rem; //This should be set to around  1/2 of the cube width + edge thickness give or take a pixel if using rounded corners
+  @animationDuration: 20s;
   --velocityX: 1;
   --velocityY: 1;
   --velocityZ: 1;
@@ -15,6 +15,8 @@
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
 
   .logo-scene {
     width: @cubeWidth;
@@ -42,10 +44,10 @@
         transform-style: preserve-3d;
         transform: translateZ(-@faceTranslationOffset);
 
-        animation: spinning infinite @animationDuration ease-in-out alternate;
+        animation: spinning infinite @animationDuration ease-in-out;
 
         /* &:hover {
-          animation-play-state: paused; // Consider using this as a fun way to embed links on each face
+          animation-play-state: paused; // Consider using this as a fun way to embed event triggers or links to easter eggs on each face
         } */
 
         .cube-face {
@@ -59,17 +61,22 @@
           font-size: calc(@cubeWidth / 3);
           text-align: center;
           color: hsla(@greenHighlight, 1);
-          animation: wink infinite @animationDuration ease-in-out;
+          //animation: wink infinite @animationDuration ease-in-out;
 
           &:hover {
             box-shadow: 0px 0px 12px 3px @greenHighlight;
             text-shadow: 0px 0px 6px @greenHighlight;
           }
-        
+
           &.front {
-            transform: rotateY(  0deg) translateZ(@faceTranslationOffset);
-            &::before {
-              content: ';)';
+            transform: rotateY(  0deg) rotateZ(90deg) translateZ(@faceTranslationOffset);
+            &::after {
+              content: ':)';
+            }
+            &:hover {
+              &::after {
+                content: ';)';
+              }
             }
           }
           &.right {
@@ -95,10 +102,18 @@
 
   @keyframes spinning {
     0% {
-      transform: translateZ(-@faceTranslationOffset) rotate3d(1, 1, 1, 0deg);
+      transform: 
+        translateZ(-@faceTranslationOffset)
+        rotateX(0deg)
+        rotateY(0deg)
+        rotateZ(0deg);
     }
     100% {
-      transform: translateZ(-@faceTranslationOffset) rotate3d(1, 1, 1, 360deg);
+      transform:
+        translateZ(-@faceTranslationOffset)
+        rotateX(360deg)
+        rotateY(360deg)
+        rotateZ(360deg);
     }
   }
 
