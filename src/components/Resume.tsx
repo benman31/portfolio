@@ -20,6 +20,19 @@ type ResumeDisplayParams = React.HTMLAttributes<Element> & {job: Job}
 
 const WORK_EXPERIENCE: Job[] = [
   {
+    title: 'Software Engineer',
+    companyName: 'Iron Fox Games',
+    date: 'June 2024 - Present',
+    duties: [
+      `Solo-developed Space Obby (20M+ plays) plus the entire level editor and asset pipeline — delivered in < 3 months. Tripled web game division revenue for over 8 months.`,
+      `In collaboration with artists, & designers developed 5+ web games in  < 12 months. Including the recently released Floor is Lava.`,
+      `Refactored and optimized proprietary game engine and built tooling & art pipeline for web games division, streamlining asset handling, compression, and optimization. Saved company over $10k in Unity license fees by replacing it with open source & proprietary tools.`,
+      `Programmed 3D gameplay logic, physics (Rapier), and shaders in Three.js/WebGL along with responsive UI in React. Implemented multiplayer logic, backend services (Node.js, Express, PostgreSQL), and browser multithreading.`,
+      `Participated in code reviews, production deploys, organized production meetings and retros while striving for the continuous improvement and support of our team’s work flow.`
+
+    ]
+  },
+  {
     title: 'Programmer',
     companyName: 'Other Ocean Interactive',
     date: 'May 2021 - Sept 2023',

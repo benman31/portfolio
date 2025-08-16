@@ -16,11 +16,23 @@ type CardProps = React.HTMLAttributes<HTMLDivElement> &
   //TODO: add links to playable, and detailed descriptions
   const PORTFOLIO_LIST: CardProps[] = [
     {
+      title: "Floor is Lava",
+      desc: "A fast-paced multiplayer platformer. Collect coins as you try to escape the rising lava.",
+      playURL: "https://www.coolmathgames.com/0-floor-is-lava",
+      footer: "Three.js / TypeScript / Node.js / Colyseus / React / Tailwind"
+    },
+    {
+      title: "Space Obby",
+      desc: "A cute, colorful 3D platformer set in outer space.",
+      playURL: "https://spaceobby.com/",
+      footer: "Three.js / TypeScript / Node.js / React / less.js"
+    },
+    {
       title: "Diebrary",
       desc: "A choose-your-own-adventure-novel-themed async multiplayer arena rogue-like (game genre naming conventions are neat!) in the vein of Vampire Survivors.",
       playURL: "https://play.diebrary.rip/?",
       steamURL: "https://store.steampowered.com/app/1619420/Diebrary/",
-      footer: "TypeScript / Node.js / Vue.js / PostgreSQL"
+      footer: "Pixi.js / TypeScript / Node.js / Vue.js / PostgreSQL"
     },
     {
       title: "Loot.io",
