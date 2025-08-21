@@ -10,7 +10,9 @@ type CardProps = React.HTMLAttributes<HTMLDivElement> &
     githubURL?: string,
     steamURL?: string,
     playURL?: string,
-    footer?: string
+    footer?: string,
+    videoURL?: string,
+    videoPoster?: string
   }
 
   //TODO: add links to playable, and detailed descriptions
@@ -19,26 +21,34 @@ type CardProps = React.HTMLAttributes<HTMLDivElement> &
       title: "Floor is Lava",
       desc: "A fast-paced multiplayer platformer. Collect coins as you try to escape the rising lava.",
       playURL: "https://www.coolmathgames.com/0-floor-is-lava",
-      footer: "Three.js / TypeScript / Node.js / Colyseus / React / Tailwind"
+      footer: "Three.js / TypeScript / Node.js / Colyseus / React / Tailwind",
+      videoURL: "/src/assets/videos/floor-is-lava.webm",
+      videoPoster: "/src/assets/videos/floor-is-lava-thumbnail.png"
     },
     {
       title: "Space Obby",
       desc: "A cute, colorful 3D platformer set in outer space.",
       playURL: "https://spaceobby.com/",
-      footer: "Three.js / TypeScript / Node.js / React / less.js"
+      footer: "Three.js / TypeScript / Node.js / React / less.js",
+      videoURL: "/src/assets/videos/space-obby-video.webm",
+      videoPoster: "/src/assets/videos/space-obby-thumbnail.png"
     },
     {
       title: "Diebrary",
       desc: "A choose-your-own-adventure-novel-themed async multiplayer arena rogue-like (game genre naming conventions are neat!) in the vein of Vampire Survivors.",
       playURL: "https://play.diebrary.rip/?",
       steamURL: "https://store.steampowered.com/app/1619420/Diebrary/",
-      footer: "Pixi.js / TypeScript / Node.js / Vue.js / PostgreSQL"
+      footer: "Pixi.js / TypeScript / Node.js / Vue.js / PostgreSQL",
+      videoURL: "/src/assets/videos/diebrary.webm",
+      videoPoster: "/src/assets/videos/diebrary-thumbnail.png"
     },
     {
       title: "Loot.io",
       desc: "A live multiplayer rogue-like loot-shooter with an extremely deep weapon system with near infinite permutations, hundreds of collectible pets and cosmetics, and robust player marketplace.",
       playURL: "https://loot.io/",
-      footer: "TypeScript / Node.js / Vue.js / PostgreSQL"
+      footer: "TypeScript / Node.js / Vue.js / PostgreSQL",
+      videoURL: "/src/assets/videos/loot.webm",
+      videoPoster: "/src/assets/videos/loot-thumbnail.png"
     },
     {
       title: "Snow Removal Simulator 2023",
@@ -50,7 +60,8 @@ type CardProps = React.HTMLAttributes<HTMLDivElement> &
       title: "PFX System",
       desc: "A simple particle effects rendering system written for a graphics programming assignment at UPEI.",
       githubURL: "https://github.com/benman31/pfxSystem",
-      footer: "C++ / OpenGL"
+      footer: "C++ / OpenGL",
+      videoURL: "/src/assets/videos/pfx-editor.webm",
     },
     {
       title: "Portfolio Website",
@@ -63,10 +74,22 @@ type CardProps = React.HTMLAttributes<HTMLDivElement> &
 
 //TODO: handle text overflow
 // TODO: add feedback to link icons
+import React, { useRef } from 'react';
 function Card(props: CardProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+  const handleMouseLeave = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
   return (
-    <div className='card'>
-      <div className='card-header'>
+    <div className='card' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className='card-header' style={props.videoURL ? { position: 'relative', zIndex: 1 } : {}}>
         <div className='card-title'>{props.title}</div>
         <div className='card-links'>
           {
@@ -83,16 +106,31 @@ function Card(props: CardProps) {
           }
           {
             props.playURL &&
-            <a title='play the web version' href={props.playURL} target='_blank'>
+            <a className='animated-pulse' title='play the web version' href={props.playURL} target='_blank'>
               <Icon style={'controller'} color={'minty-green'}></Icon>
+              <span className='hidden'>PLAY</span>
             </a>
           }
         </div>
       </div>
-      <div className='card-description'>{props.desc}</div>
+      <div className={`card-description ${props.playURL ? 'playable' : ''}`} style={props.videoURL ? { position: 'relative', zIndex: 1 } : {}}>{props.desc}</div>
+      {props.videoURL && (
+        <div className='card-video-container'>
+          <video
+            ref={videoRef}
+            className='card-video'
+            src={props.videoURL}
+            poster={props.videoPoster}
+            muted
+            loop
+            playsInline
+            preload='metadata'
+          />
+        </div>
+      )}
       {
         props.footer &&
-        <div className='card-footer'>{props.footer}</div>
+        <div className={`card-footer ${props.videoURL ? 'playable' : ''}`} style={props.videoURL ? { position: 'relative', zIndex: 1 } : {}}>{props.footer}</div>
       }
     </div>
   )
