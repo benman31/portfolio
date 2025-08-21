@@ -11,6 +11,8 @@ import diebraryVid from '../assets/videos/diebrary.webm'
 import lootImg from '../assets/videos/loot-thumbnail.png'
 import lootVid from '../assets/videos/loot.webm'
 import pfxVid from '../assets/videos/pfx-editor.webm'
+import snowImg from '../assets/videos/snow-removal-sim-thumbnail.png'
+import snowVid from '../assets/videos/snow-removal-sim.webm'
 
 
 type CardProps = React.HTMLAttributes<HTMLDivElement> &
@@ -64,7 +66,9 @@ type CardProps = React.HTMLAttributes<HTMLDivElement> &
       title: "Snow Removal Simulator 2023",
       desc: "Capstone graduation project at UPEI - A first person game about snow removal, leveraging the marching cubes algorithm for real-time 3D mesh manipulation.",
       githubURL: "https://github.com/benman31/snow-removal-sim",
-      footer: "C# / Unity3D"
+      footer: "C# / Unity3D",
+      videoURL: snowVid,
+      videoPoster: snowImg
     },
     {
       title: "PFX System",
@@ -123,7 +127,7 @@ function Card(props: CardProps) {
           }
         </div>
       </div>
-      <div className={`card-description ${props.playURL ? 'playable' : ''}`} style={props.videoURL ? { position: 'relative', zIndex: 1 } : {}}>{props.desc}</div>
+      <div className={`card-description ${props.videoURL ? 'playable' : ''}`} style={props.videoURL ? { position: 'relative', zIndex: 1 } : {}}>{props.desc}</div>
       {props.videoURL && (
         <div className='card-video-container'>
           <video
