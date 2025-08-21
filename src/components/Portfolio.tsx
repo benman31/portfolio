@@ -2,6 +2,16 @@ import '../styles/Portfolio.less'
 import Icon from './Icon'
 import SectionHeader from './SectionHeader'
 import TransitionWrapper from './TransitionWrapper'
+import floorIsLavaImg from '../assets/videos/floor-is-lava-thumbnail.png'
+import floorIsLavaVid from '../assets/videos/floor-is-lava.webm'
+import spaceObbyImg from '../assets/videos/space-obby-thumbnail.png'
+import spaceObbyVid from '../assets/videos/space-obby-video.webm'
+import diebraryImg from '../assets/videos/diebrary-thumbnail.png'
+import diebraryVid from '../assets/videos/diebrary.webm'
+import lootImg from '../assets/videos/loot-thumbnail.png'
+import lootVid from '../assets/videos/loot.webm'
+import pfxVid from '../assets/videos/pfx-editor.webm'
+
 
 type CardProps = React.HTMLAttributes<HTMLDivElement> &
   {
@@ -22,16 +32,16 @@ type CardProps = React.HTMLAttributes<HTMLDivElement> &
       desc: "A fast-paced multiplayer platformer. Collect coins as you try to escape the rising lava.",
       playURL: "https://www.coolmathgames.com/0-floor-is-lava",
       footer: "Three.js / TypeScript / Node.js / Colyseus / React / Tailwind",
-      videoURL: "/src/assets/videos/floor-is-lava.webm",
-      videoPoster: "/src/assets/videos/floor-is-lava-thumbnail.png"
+      videoURL: floorIsLavaVid,
+      videoPoster: floorIsLavaImg
     },
     {
       title: "Space Obby",
       desc: "A cute, colorful 3D platformer set in outer space.",
       playURL: "https://spaceobby.com/",
       footer: "Three.js / TypeScript / Node.js / React / less.js",
-      videoURL: "/src/assets/videos/space-obby-video.webm",
-      videoPoster: "/src/assets/videos/space-obby-thumbnail.png"
+      videoURL: spaceObbyVid,
+      videoPoster: spaceObbyImg
     },
     {
       title: "Diebrary",
@@ -39,16 +49,16 @@ type CardProps = React.HTMLAttributes<HTMLDivElement> &
       playURL: "https://play.diebrary.rip/?",
       steamURL: "https://store.steampowered.com/app/1619420/Diebrary/",
       footer: "Pixi.js / TypeScript / Node.js / Vue.js / PostgreSQL",
-      videoURL: "/src/assets/videos/diebrary.webm",
-      videoPoster: "/src/assets/videos/diebrary-thumbnail.png"
+      videoURL: diebraryVid,
+      videoPoster: diebraryImg
     },
     {
       title: "Loot.io",
       desc: "A live multiplayer rogue-like loot-shooter with an extremely deep weapon system with near infinite permutations, hundreds of collectible pets and cosmetics, and robust player marketplace.",
       playURL: "https://loot.io/",
       footer: "TypeScript / Node.js / Vue.js / PostgreSQL",
-      videoURL: "/src/assets/videos/loot.webm",
-      videoPoster: "/src/assets/videos/loot-thumbnail.png"
+      videoURL: lootVid,
+      videoPoster: lootImg
     },
     {
       title: "Snow Removal Simulator 2023",
@@ -61,7 +71,7 @@ type CardProps = React.HTMLAttributes<HTMLDivElement> &
       desc: "A simple particle effects rendering system written for a graphics programming assignment at UPEI.",
       githubURL: "https://github.com/benman31/pfxSystem",
       footer: "C++ / OpenGL",
-      videoURL: "/src/assets/videos/pfx-editor.webm",
+      videoURL: pfxVid,
     },
     {
       title: "Portfolio Website",
